@@ -7,42 +7,37 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="site-header">
-<div class="brand">
-<div class="logo-box">
-    <img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/college.png.jpeg" 
-         alt="College Logo" class="header-logo">
-</div>
-<div>
-<h1>SmartMeal</h1>
-<p class="subtitle">Login Page</p>
-</div>
-</div>
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
-<a href="profile.html" id="profileLink">Account</a>
-</nav>
+  <div class="brand">
+    <div class="logo-box">🏫</div>
+    <div>
+      <h1>SmartMeal</h1>
+      <p class="subtitle">College Cafeteria</p>
+    </div>
+  </div>
 </header>
+
 <main class="container fade-in">
-<h2>Login / Register</h2>
-<form id="loginForm" onsubmit="event.preventDefault(); doLogin();">
-<label>Name</label>
-<input type="text" id="name" placeholder="Your Name" required>
-<label>Email</label>
-<input type="email" id="email" placeholder="Your College Email" required>
-<label>Password</label>
-<input type="password" id="password" placeholder="Password" required>
-<label>Phone</label>
-<input type="text" id="phone" placeholder="Phone Number">
-<button class="btn primary" type="submit">Login</button>
-</form>
+  <h2>Login</h2>
+  <div class="form">
+    <label>Email (use your College email)</label>
+    <input id="email" placeholder="student@ocmt.edu.om" type="email">
+    <label>Password</label>
+    <input id="password" placeholder="password" type="password">
+    <div class="actions">
+      <button class="btn primary" onclick="doLogin()">Login</button>
+      <button class="btn ghost" onclick="demoLogin()">Demo Login</button>
+    </div>
+    <p style="font-size:13px;color:#666">Accounts are stored locally for this demo-only site.</p>
+  </div>
 </main>
+
 <footer class="site-footer">
-<div>Contact: cafeteria@ocmt.edu.om</div>
-<div>© SmartMeal • Terms & Conditions</div>
+  <div>Contact: cafeteria@ocmt.edu.om</div>
+  <div>© SmartMeal</div>
 </footer>
+
 <script src="app.js"></script>
 </body>
 </html>
