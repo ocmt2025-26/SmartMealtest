@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmartMeal - Profile</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+<div class="brand">
+<div class="logo-box">
+    <img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/college.png.jpeg" 
+         alt="College Logo" class="header-logo">
+</div>
+<div>
+<h1>SmartMeal</h1>
+<p class="subtitle">Profile</p>
+</div>
+</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+<a href="profile.html" id="profileLink">Account</a>
+</nav>
+</header>
+<main class="container fade-in">
+<h2>Your Profile</h2>
+<div id="profileBox"></div>
+<h2>Your Orders</h2>
+<div id="orderHistory"></div>
+<button class="btn ghost" onclick="logout()">Logout</button>
+</main>
+<footer class="site-footer">
+<div>Contact: cafeteria@ocmt.edu.om</div>
+<div>© SmartMeal • Terms & Conditions</div>
+</footer>
+<script src="app.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+    const user = JSON.parse(localStorage.getItem('user'));
+    if(!user){
+        window.location.href = 'login.html';
+    } else {
+        renderProfile();
+    }
+});
+</script>
+</body>
+</html>
+
+
+
