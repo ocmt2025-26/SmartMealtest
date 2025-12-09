@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,42 +7,50 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="site-header">
-<div class="brand">
-<div class="logo-box">
-    <img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/college.png.jpeg" 
-         alt="College Logo" style="width:40px; height:40px; object-fit:cover; border-radius:4px;">
-</div>
-<div>
-<h1>SmartMeal</h1>
-<p class="subtitle">College Cafeteria</p>
-</div>
-</div>
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="menu.html">Menu</a>
-<a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
-<a href="profile.html" id="profileLink">Login</a>
-</nav>
+  <div class="brand">
+    <div class="logo-box">🏫</div>
+    <div>
+      <h1>SmartMeal</h1>
+      <p class="subtitle">College Cafeteria</p>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    <a href="profile.html" id="profileLink">Account</a>
+  </nav>
 </header>
+
 <main class="container fade-in">
-<section class="hero" style="display:block;">
-<div class="hero-left">
-<h2>Welcome to SmartMeal</h2>
-<p>Please login to access the menu and order your meals.</p>
-<div class="actions">
-<a class="btn ghost" href="login.html">Login</a>
-</div>
-<img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/home.png.jpeg" 
-     alt="SmartMeal" style="width:100%; max-width:500px; border-radius:8px; object-fit:cover; margin-top:20px; display:block;">
-</div>
-</section>
+  <section class="hero">
+    <div class="hero-left">
+      <h2>Order fresh meals from the campus cafeteria</h2>
+      <p>Fast pickup — secure payments — student discounts</p>
+      <div class="actions">
+        <a class="btn primary" href="menu.html">Start Ordering Now</a>
+        <a class="btn ghost" href="login.html">Login</a>
+      </div>
+      <ul class="popular">
+        <li>Burger</li>
+        <li>pizza</li>
+        <li>Black Coffee</li>
+        <li>Fries</li>
+      </ul>
+    </div>
+    <div class="hero-right">
+    </div>
+  </section>
 </main>
+
 <footer class="site-footer">
-<div>Contact: cafeteria@ocmt.edu.om</div>
-<div>© SmartMeal • Terms & Conditions</div>
+  <div>Contact: cafeteria@ocmt.edu.om</div>
+  <div>© SmartMeal • Terms & Conditions</div>
 </footer>
+
 <script src="app.js"></script>
 </body>
 </html>
-
