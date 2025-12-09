@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmartMeal - Admin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="brand">
+        <div class="logo-box">
+            <img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/college.png.jpeg" 
+                 alt="College Logo" style="width:40px; height:40px; object-fit:cover; border-radius:4px;">
+        </div>
+        <div>
+            <h1>SmartMeal</h1>
+            <p class="subtitle">Admin Panel</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+        <a href="#" id="profileLink">Account</a>
+    </nav>
+</header>
+
+<main class="container fade-in">
+    <h2>Orders Management</h2>
+    <div id="ordersList"></div>
+    <button class="btn ghost" onclick="logout()">Logout</button>
+</main>
+
+<footer class="site-footer">
+    <div>Contact: cafeteria@ocmt.edu.om</div>
+    <div>© SmartMeal • Terms & Conditions</div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+    updateProfileLink();
+    const user = getUser();
+    if (!user || !user.isAdmin) {
+        alert('Access denied. Admins only!');
+        location.href = 'admin-login.html';
+    } else {
+        renderAdmin();
+    }
+</script>
+</body>
+</html>
