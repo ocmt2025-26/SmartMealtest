@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SmartMeal - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo-box">
+                <img src="https://raw.githubusercontent.com/ocmt2025-26/SmartMeal/main/college.png.jpeg" 
+                     alt="College Logo" style="width:40px; height:40px; object-fit:cover; border-radius:4px;">
+            </div>
+            <div>
+                <h1>SmartMeal</h1>
+                <p class="subtitle">Cart</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            <a href="profile.html" id="profileLink">Account</a>
+        </nav>
+    </header>
+
+    <main class="container fade-in">
+        <h2>Your Cart</h2>
+        <div id="cartContainer"></div>
+
+        <div class="delivery-time" style="margin-top:20px;">
+            <h3>Choose Delivery Time</h3>
+            <input type="time" id="deliveryTime" class="time-input">
+        </div>
+
+        <div class="totals" style="margin-top:20px;">
+            <p>Subtotal: <span id="subtotal">0.00</span> OMR</p>
+            <p>Total: <span id="total">0.00</span> OMR</p>
+
+            <div class="payment">
+                <label for="paymentMethod">Payment:</label>
+                <select id="paymentMethod">
+                    <option value="cod">Cash</option>
+                </select>
+            </div>
+
+            <div class="actions" style="margin-top:15px;">
+                <button class="btn primary" onclick="confirmOrder()">Confirm Order ✅</button>
+                <button class="btn ghost" onclick="clearCart()">Clear Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div>Contact: cafeteria@ocmt.edu.om</div>
+        <div>© SmartMeal • Terms & Conditions</div>
+    </footer>
+
+    <script src="app.js"></script>
+
+    <script>
+        window.onload = function () {
+            renderCartPage();
+            updateCartCount();
+        }
+    </script>
+</body>
+
+</html>
+
